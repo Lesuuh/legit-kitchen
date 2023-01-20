@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: rgb(218, 19, 19);
+    cursor: pointer;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 0 30px;
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    /* box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75); */
+}
+nav .logo{
+    font-size: 2rem;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row;
+}
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    list-style: none;
+    padding: 0 25px; 
+    font-size: 1.2rem; 
+    color: #fff;
+    transition: .5s;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    border-bottom: 2px solid rgb(218, 19, 19) ;
+    /* transition: 1s; */
+ 
+}
+nav button{
+    background: rgb(218, 19, 19);
+    font-size: 1.2rem;
+    transition: .5s;
+}
+nav button:hover{
+    background: #fff;
+    color:  rgb(218, 19, 19);
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/hero.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    padding-top: -100px;
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+main .header{
+    padding: 2rem 0;
+}
+main .header span{
+    color: rgb(218, 19, 19);
+}
+
+/* menu */
+
+.menu{
+    margin-top: 50px;
+    padding: 0 30px;
+}
+
+.menu .header{
+    text-align: center;
+}
+
+.menu .buttons{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+main .search input{
+    width: 500px;
+    height: 45px;
+    padding: 10px;
+}
+
+main .search input:focus{
+    border: red;
+}
+
+#find{
+    width: 100px;
+    /* padding: 10px 20px; */
+    background:  rgb(218, 19, 19);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.menu-container{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+/* menu images */
+.menu .img{
+    height: 150px;
+    /* width: 100px; */
+    
+}
+
+.menu .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.menu-container .box{
+    width: 23%;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+   display: flex;
+   flex-flow: column;
+   margin-top: 20px;
+
+}
+
+.menu-container .box .text{
+    display: flex;
+    height: 50px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+}
+
+.menu-container .box .text h3{
+    font-size: 1rem;
+}
+
+.menu-container .box .text p{
+    color: rgb(218, 19, 19);
+    font-weight: 500;
+}
+
+.menu-container .box .text span{
+    font-weight: 700;
+}
+
+/* parallax */
+.parallax{
+    background-image: url(images/alex-haney-CAhjZmVk5H4-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-top: 50px;
+}
+.parallax::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(calc(-1 * var(--scroll-y) * 0.4)); /* adjust the speed of the effect */
+    z-index: -1;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 80vh;
+    background-image: url(images/daan-evers-tKN1WXrzQ3s-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    padding-top: -100px;
+}
+
+footer:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent -100%, black 100%);
+    opacity: 1;
+}
+
+.footer-container{
+    width: 100%;
+    z-index: 1;
+    padding: 0 50px;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: center; 
+    gap: 50px;
+}
+
+.footer-box{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    width: 30%;
+    text-align: left;
+}
+
+.footer-box li{
+    list-style: none;
+}
+.footer-box h4{
+    font-size: 1.2rem;
+    color: rgb(218, 19, 19);
+}
+.footer-box p{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.footer-box ul{
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+.footer-box .links li{
+    padding: 5px 0;
+    color: rgba(255, 255, 255, 0.685);
+}
+.footer-box .links span{
+    margin-right: 10px;
+}
+
+footer input{
+    width: 500px;
+    height: 45px;
+    padding: 10px;
+}
+
+footer input:focus{
+    border: red;
+}
