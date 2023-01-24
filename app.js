@@ -141,3 +141,19 @@ reservationBtn.addEventListener("click", function(){
 reservationSection.addEventListener("transitionend", function(toremove){
     toremove.classList.remove("is-scrolling")
 })
+
+
+// the nav bar
+const navBtn = document.querySelector(".hamburger");
+const nav = document.getElementById("nav");
+const navLinks = document.querySelector(".navlinks")
+
+navBtn.addEventListener("click", () => {
+
+    // nav.classList.remove("nav")
+    nav.classList.toggle("active")
+    navLinks.style.transition = "2s"
+    navLinks.style.transform = "translateY(5%)"
+    // navLinks.classList.toggle("transform")
+
+})
