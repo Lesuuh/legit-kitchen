@@ -148,12 +148,21 @@ const navBtn = document.querySelector(".hamburger");
 const nav = document.getElementById("nav");
 const navLinks = document.querySelector(".navlinks")
 
-navBtn.addEventListener("click", () => {
 
-    // nav.classList.remove("nav")
+navBtn.addEventListener("click", () => {
     nav.classList.toggle("active")
     navLinks.style.transition = "2s"
     navLinks.style.transform = "translateY(5%)"
-    // navLinks.classList.toggle("transform")
+    body.style.opacity = "0.5"
+
 
 })
+
+
+window.onscroll = function(){
+    if(window.pageYOffset > 50){
+        nav.classList.add("sticky")
+    }else{
+        nav.classList.remove("sticky")
+    }
+}
